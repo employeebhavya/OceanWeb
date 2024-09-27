@@ -107,4 +107,7 @@
   .cardServiceSlider {
     width: 300px !important;
   }
+  .serviceSliderSection {
+    height: 70vh;
+  }
 }

@@ -11,7 +11,7 @@
   background-image: url("../../public/projectBgHome.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  block-size: cover;
+  background-size: cover;
 }
 .sectionProjectSlider::before {
   content: "";
@@ -166,5 +166,8 @@
   }
   .slide {
     flex: 0 0 100%;
+  }
+  .sectionProjectSlider {
+    height: 100% !important;
   }
 }
