@@ -170,4 +170,7 @@
   .sectionProjectSlider {
     height: 100% !important;
   }
+  .sliderWrapper {
+    height: 50vh !important;
+  }
 }

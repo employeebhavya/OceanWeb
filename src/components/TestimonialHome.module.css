@@ -94,8 +94,8 @@
 }
 .prevButton:hover,
 .nextButton:hover {
-  background-color: var(--color-white);
-  color: var(--color-dark-blue);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 /* responsive-css-starts-here */
@@ -103,5 +103,13 @@
   .rowTestimonialHome {
     grid-template-columns: 100%;
     row-gap: 30px;
+  }
+  .navigation {
+    bottom: 0;
+  }
+  .prevButton,
+  .nextButton {
+    height: 30px;
+    width: 30px;
   }
 }

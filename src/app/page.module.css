@@ -108,4 +108,11 @@
   .rowDream .columnDream:nth-child(2) img {
     width: 100%;
   }
+  .counterSection {
+    margin-top: 0 !important;
+    margin-bottom: 25px;
+  }
+  .dreamFloat {
+    bottom: 0 !important;
+  }
 }
