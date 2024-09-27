@@ -43,7 +43,7 @@
   color: var(--color-white);
 }
 .linkTransform {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -51,13 +51,19 @@
   color: var(--color-dark-blue);
   background-color: var(--color-white);
   position: absolute;
-  bottom: -17vh;
+  bottom: -7vh;
   right: 3vw;
   width: clamp(80px, 7vw, 7vw);
   height: clamp(80px, 7vw, 7vw);
   border-radius: 50%;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: translateX(10px);
+  transition: all 0.5s ease;
+}
+.rowTransform:hover .linkTransform {
+  display: flex;
+  transform: translateX(0);
 }
 
 /* responsive-css-starts-here */
@@ -68,5 +74,8 @@
   }
   .columnTransform {
     width: 100% !important;
+  }
+  .linkTransform {
+    bottom: -35px !important;
   }
 }

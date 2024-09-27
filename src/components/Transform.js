@@ -83,14 +83,14 @@ function Transform() {
               come true. Contact us today to discover how we can bring your
               vision to life with our commitment to quality craftsmanship and
               client satisfaction.
-              <Link
-                href="/contact"
-                className={Styles.linkTransform}
-                ref={linkRef}
-              >
-                Learn More
-              </Link>
             </p>
+            <Link
+              href="/contact"
+              className={Styles.linkTransform}
+              ref={linkRef}
+            >
+              Learn More
+            </Link>
           </div>
           <div className={Styles.columnTransform}>
             <Image

@@ -115,4 +115,7 @@
   .dreamFloat {
     bottom: 0 !important;
   }
+  .dreamSection {
+    height: 100% !important;
+  }
 }
