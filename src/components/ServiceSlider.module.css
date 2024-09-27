@@ -1,0 +1,110 @@
+.serviceSliderSection {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-dark-blue);
+  padding: clamp(40px, 5vh, 5vh) 0;
+  color: var(--color-white);
+  background-image: url("../../public/homeServiceBg.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.serviceSliderSection .rowServiceSlider:nth-child(1) {
+  margin-bottom: clamp(20px, 2vh, 2vh);
+}
+.rowServiceSlider {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.columnServiceSlider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(12px, 1vh, 1vh);
+}
+.serviceSliderSection .rowServiceSlider .columnServiceSlider:nth-child(2) {
+  align-items: flex-end;
+}
+.columnServiceSlider h4 {
+  font-size: clamp(15px, 1vw, 1vw);
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--color-white);
+}
+.columnServiceSlider h2 {
+  font-size: clamp(22px, 2.5vw, 2.5vw);
+  font-weight: normal;
+  color: var(--color-white);
+}
+.columnServiceSlider button {
+  font-size: clamp(12px, 1vw, 1vw);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: clamp(10px, 1vw, 1vw) clamp(20px, 2vw, 2vw);
+  border-radius: 1vw;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px var(--color-white);
+  background: transparent;
+  color: var(--color-white);
+}
+
+.columnServiceSlider button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--color-white);
+  z-index: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.columnServiceSlider button:hover::before {
+  opacity: 1;
+  height: 100%;
+}
+.columnServiceSlider button:hover span {
+  color: var(--color-dark-blue);
+}
+
+.columnServiceSlider button span {
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+}
+.columnServiceSlider button span svg {
+  margin-left: 5px;
+}
+.cardServiceSlider {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(12px, 1vh, 1vh);
+}
+.cardServiceSlider h3 {
+  font-size: clamp(16px, 1.2vw, 1.2vw);
+  font-weight: normal;
+  color: var(--color-white);
+}
+
+/* responsive-css-starts-here */
+@media screen and (max-width: 768px) {
+  .serviceSliderSection .rowServiceSlider {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .serviceSliderSection .rowServiceSlider .columnServiceSlider:nth-child(2) {
+    align-items: flex-start;
+  }
+  .cardServiceSlider {
+    width: 300px !important;
+  }
+}

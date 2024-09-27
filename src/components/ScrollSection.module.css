@@ -1,0 +1,154 @@
+.scrollSectionOuter {
+  overflow: hidden;
+}
+
+.scrollSectionInner {
+  height: 100vh;
+  width: 200vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.scrollSection {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* about-section-css */
+.sectionAbout {
+  position: relative;
+  padding-top: 13vh;
+  height: 100%;
+  width: 100%;
+  background: var(--color-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.aboutContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(330px, 33vw, 33vw);
+  height: clamp(330px, 33vw, 33vw);
+  color: white;
+  padding: 0 clamp(40px, 5vw, 5vw);
+  border: solid 1px #fff;
+  border-radius: 100%;
+  text-align: center;
+}
+.aboutHeading {
+  font-size: clamp(25px, 3vw, 3vw);
+  margin-bottom: clamp(10px, 2vh, 2vh);
+  font-weight: 400;
+}
+.aboutDescription {
+  font-size: clamp(14px, 1vw, 1vw);
+  margin-bottom: clamp(12px, 4vh, 4vh);
+  text-align: justify;
+}
+.aboutBtn {
+  padding: clamp(10px, 1vw, 1vw) clamp(20px, 1.5vw, 1.5vw);
+  font-size: clamp(14px, 1vw, 1vw);
+  border-radius: clamp(10px, 1.5vw, 1.5vw);
+  background: transparent;
+  color: var(--color-white);
+  font-weight: 500;
+  border: solid 1px #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.aboutBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--color-white);
+  z-index: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.aboutBtn:hover::before {
+  opacity: 1;
+  height: 100%;
+}
+.aboutBtn:hover span {
+  color: var(--color-dark-blue);
+}
+
+.aboutBtn span {
+  position: relative;
+  z-index: 1;
+}
+/* about-section-two */
+.sectionAboutTwo {
+  position: relative;
+  padding-top: 13vh;
+  height: 100%;
+  width: 100%;
+  background: var(--color-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.circlesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.circlesRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circlesRow .circle:not(:first-child) {
+  margin-left: clamp(-7px, -1vw, -1vw);
+}
+.circle {
+  position: relative;
+  width: clamp(130px, 15vw, 15vw);
+  height: clamp(130px, 15vw, 15vw);
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: clamp(14px, 1.5vw, 1.5vw);
+  text-align: center;
+}
+
+.circle {
+  opacity: 0; /* Start as invisible */
+  transform: translateY(200px); /* Start down for the animation */
+  transition: opacity 0.5s, transform 0.5s; /* Add transitions for smoothness */
+}
+
+.circleText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* responsive-css-starts-here */
+@media only screen and (max-width: 768px) {
+  /* .circlesRow {
+    flex-direction: column;
+  } */
+}
